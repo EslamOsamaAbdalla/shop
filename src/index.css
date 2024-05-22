@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link {
+  @apply p-6 transition text-center capitalize cursor-pointer 
+    relative z-10 overflow-hidden before:transition-transform 
+    md:p-1
+    before:absolute before:left-0 before:top-0 before:w-full before:h-full 
+    before:bg-cyan-600 before:translate-y-full hover:before:translate-y-0
+    before:-z-10;
+}
+.nav-hide {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 0);
+}
+.nav-show {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
