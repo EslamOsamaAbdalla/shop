@@ -2,17 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-link {
-  @apply p-6 transition text-center capitalize cursor-pointer 
-    relative z-10 overflow-hidden before:transition-transform 
-    md:p-1
-    before:absolute before:left-0 before:top-0 before:w-full before:h-full 
-    before:bg-cyan-600 before:translate-y-full hover:before:translate-y-0
-    before:-z-10;
+.nav-link{
+    @apply py-2 my-2 flex justify-center items-center relative z-0 transition
+    md:mx-2 md:px-2
+    before:absolute before:-z-10 before:w-full before:h-0 
+    before:transition-all before:bg-red-700 hover:before:h-full;
 }
-.nav-hide {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 0);
+.nav-show{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.nav-show {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.nav-hide{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.categoury-show{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.categoury-hide{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.categoury-remove-clip{
+    clip-path: none;
 }
