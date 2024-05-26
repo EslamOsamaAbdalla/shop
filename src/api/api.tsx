@@ -7,9 +7,9 @@ export const getCategoury = async ()=>{
         })
         return data
 }
-export const getProducts = async (limit:number, offset:number)=>{
+export const getProducts = async (offset:number, limit:number)=>{
     let data:[] | undefined;
-    await fetch(`https://api.escuelajs.co/api/v1/products?limit=${limit}&offset=${offset}`).then((res)=>{
+    await fetch(`https://api.escuelajs.co/api/v1/products?offset=${offset}&limit=${limit}`).then((res)=>{
                 return res.json()
         }).then((res)=>{
             return data = res

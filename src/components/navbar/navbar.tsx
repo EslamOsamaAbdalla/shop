@@ -22,7 +22,7 @@ function NavBar() {
         })
     }
     return (
-        <header className="w-full flex items-center justify-between bg-red-600
+        <header className="w-full flex items-center justify-between bg-blue-950
             py-3 px-1 text-white md:px-3 lg:px-8">
             <h1>
                 <Link to="/" className="capitalize">
@@ -35,10 +35,10 @@ function NavBar() {
             />
 
             <div className="relative md:static">
-                <FaBars className="text-3xl p-1 cursor-pointer transition hover:bg-red-700 md:hidden"
+                <FaBars className="text-3xl p-1 cursor-pointer transition hover:bg-blue-900 md:hidden"
                     onClick={()=>{setNavToggle(!navToggle)}}/>
 
-                <ul className={`absolute px-6 -right-1 top-10 bg-red-600 w-screen transition-all 
+                <ul className={`absolute px-6 -right-1 top-10 bg-blue-950 w-screen transition-all 
                     md:relative md:top-0 md:flex md:items-center md:w-[auto] ${
                     navToggle? "nav-show":"nav-hide"} ${categouryToggle? "categoury-remove-clip":""} `}>
                     <Link to="/" className=" flex flex-col">
@@ -51,7 +51,7 @@ function NavBar() {
                         </div>
 
                         <div className={`flex flex-col w-full transition-all md:absolute md:top-16
-                            md:bg-red-600 md:rounded-bl-lg z-30 ${
+                            md:bg-blue-950 md:rounded-bl-lg z-30 ${
                             categouryToggle? "categoury-show" : "categoury-hide h-0"
                         }`}>
                             {
@@ -63,7 +63,7 @@ function NavBar() {
                                             <div key={index}
                                                 className="flex items-center py-3 my-2 relative z-0
                                                 before:absolute before:-z-10 before:w-full before:h-0 
-                                                before:transition-all before:bg-red-700 hover:before:h-full"
+                                                before:transition-all before:bg-blue-900 hover:before:h-full"
                                             >
                                                 <img src={data.image} alt={data.name} 
                                                     className="w-16 pl-3"

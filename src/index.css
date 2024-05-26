@@ -6,7 +6,7 @@
     @apply py-2 my-2 flex justify-center items-center relative z-0 transition
     md:mx-2 md:px-2
     before:absolute before:-z-10 before:w-full before:h-0 
-    before:transition-all before:bg-red-700 hover:before:h-full;
+    before:transition-all before:bg-blue-900 hover:before:h-full;
 }
 .nav-show{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
