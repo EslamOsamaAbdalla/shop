@@ -3,10 +3,7 @@ import { FaShoppingCart, FaLongArrowAltDown } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import {getCategoury} from "../../api/api"
-interface CategouryObj{
-    "name": string,
-    "image": string,
-}
+import {CategouryObj} from "../../typescritp-types/types"
 function NavBar() {
     const [navToggle, setNavToggle] = useState<boolean>();
     const [categouryToggle, setCategouryToggle] = useState<boolean>(false);
@@ -54,7 +51,7 @@ function NavBar() {
                         </div>
 
                         <div className={`flex flex-col w-full transition-all md:absolute md:top-16
-                            md:bg-red-600 md:rounded-bl-lg ${
+                            md:bg-red-600 md:rounded-bl-lg z-30 ${
                             categouryToggle? "categoury-show" : "categoury-hide h-0"
                         }`}>
                             {
