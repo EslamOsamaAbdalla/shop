@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { getProducts } from "../../api/api"
 import { Products as ProductsType } from "../../typescritp-types/types"
+import noProductImg from "../../assets/no_img_avaliable.jpg"
 function Products() {
     const [getAllProducts, setGetAllProducts] = useState<[]>()
     useEffect(() => {
@@ -18,8 +19,13 @@ function Products() {
                     getAllProducts.map((data:ProductsType)=>{
                         return(<Link to={`/product/${data.id}`} key={data.id}
                                     className="w-1/4 h-[34rem] flex flex-col items-center m-3 py-5 rounded-lg
-                                         bg-blue-950 text-white">
-                                    <img src={data.images[0]} alt={data.title}
+                                        bg-blue-950 text-white">
+                                    <img src={data.images[0]? 
+                                    data.images[0].includes("[\"")
+                                    ? data.images[0].replace("[\"","").replace("\"]","")
+                                    :data.images[0]
+                                    :noProductImg
+                                    } alt={data.title}
                                         className="w-[80%] rounded-lg"/>
                                     <div className="w-[80%] flex flex-col items-start h-full mt-6">
                                         <h3 className=" font-bold">{data.title}</h3>

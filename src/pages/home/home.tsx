@@ -1,4 +1,5 @@
 import CategouryCrousal from "../../components/categoury-crousal/categoury-crousal"
+import Pagenation from "../../components/pagenation/pagenation"
 import Products from "../../components/products/products"
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
         <div>
             <CategouryCrousal/>
             <Products/>
+            <Pagenation/>
         </div>
     )
 }

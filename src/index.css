@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* nav bar */
 .nav-link{
     @apply py-2 my-2 flex justify-center items-center relative z-0 transition
     md:mx-2 md:px-2
@@ -23,3 +23,13 @@
 .categoury-remove-clip{
     clip-path: none;
 }
+/* nav bar */
+/* pagenation */
+.pagenation-item{
+    @apply p-3 m-3 h-8 bg-blue-900 flex justify-center items-center text-white rounded
+    transition hover:bg-blue-950
+}
+.pagenation-active{
+    @apply bg-blue-950
+}
+/* pagenation */

@@ -41,7 +41,7 @@ function NavBar() {
                 <ul className={`absolute px-6 -right-1 top-10 bg-blue-950 w-screen transition-all 
                     md:relative md:top-0 md:flex md:items-center md:w-[auto] ${
                     navToggle? "nav-show":"nav-hide"} ${categouryToggle? "categoury-remove-clip":""} `}>
-                    <Link to="/" className=" flex flex-col">
+                    <div className=" flex flex-col cursor-pointer">
                         <div className="nav-link w-full flex justify-center p-3"
                             onClick={()=>{
                                 setCategouryToggle(!categouryToggle)
@@ -74,9 +74,9 @@ function NavBar() {
                                 })
                             }
                         </div>
-                    </Link>
+                    </div>
 
-                    <Link to="/" className="nav-link">
+                    <Link to="/cart" className="nav-link">
                         <FaShoppingCart/>
                     </Link>
 
